@@ -5,12 +5,12 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-  title: 'Article-One | Sanjana Srinivas',
-  heading: 'Article-One',
-  date: '9th September, 2017',
-  content:
-  ` <p> This is my first article on this website. I have to pick up pace and finish watching the videos. This is my first article on this website. I have to pick up pace and finish watching the videos.This is my first article on this website. I have to pick up pace and finish watching the videos.This is my first article on this website. I have to pick up pace and finish watching the videos.
+var articles = {
+     articleOne : {
+    title : 'Article One | Sanjana Srinivas',
+    heading:'Article-Onne',
+    date: '9th September, 2017',
+    content:`<p> This is my first article on this website. I have to pick up pace and finish watching the videos. This is my first article on this website. I have to pick up pace and finish watching the videos.This is my first article on this website. I have to pick up pace and finish watching the videos.This is my first article on this website. I have to pick up pace and finish watching the videos.
             </p>
             
             <p> This is my first article on this website. I have to pick up pace and finish watching the videos. This is my first article on this website. I have to pick up pace and finish watching the videos.This is my first article on this website. I have to pick up pace and finish watching the videos.This is my first article on this website. I have to pick up pace and finish watching the videos.
@@ -19,8 +19,28 @@ var articleOne = {
             <p> This is my first article on this website. I have to pick up pace and finish watching the videos. This is my first article on this website. I have to pick up pace and finish watching the videos.This is my first article on this website. I have to pick up pace and finish watching the videos.This is my first article on this website. I have to pick up pace and finish watching the videos.
             </p>`
     
+},
+    articleTwo : { 
+        title: 'Article-Two | Sanjana Srinivas',
+  heading: 'Article-Two',
+  date: '10th September, 2017',
+  content:
+  ` <p> This is my second article for my webapp. I'm currently improving content.
+            </p>`
+            
+           
+    },
+     articleThree : {
+        title: 'Article-Three | Sanjana Srinivas',
+  heading: 'Article-Three',
+  date: '11th September, 2017',
+  content:
+  `<p> This is my third article. Working on JS objects.
+            </p>`
+            
+    
+    }
 };
-
 function createTemplate(data){
     var title = data.title;
     var heading = data.heading;
